@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+    font-weight: 400;
+    background-color: rgb(173, 173, 173);
+    color: rgb(43, 43, 43);
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 600px;
+    margin: 25px auto 0 auto;
+    background-color: aliceblue;
+}
+
+header {
+    color: rgb(223, 217, 217);
+    background-image: url(../img/ferks-guare-KEZdWfYD-ow-unsplash\ 1.png);
+    background-repeat: no-repeat;
+}
