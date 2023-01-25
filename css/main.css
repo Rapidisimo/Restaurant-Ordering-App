@@ -5,19 +5,104 @@
 body {
     font-size: 16px;
     font-weight: 400;
-    background-color: rgb(173, 173, 173);
+    background-color: rgb(245, 245, 245);
     color: rgb(43, 43, 43);
     line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.banner h1,
+.banner h2 {
+    font-family: 'Smythe', cursive;
+    margin-left: 3rem;
+}
+.banner h1 {
+    font-size: 2.4375em;
+    padding-top: 2rem;
+}
+.banner h2 {
+    font-size: 1.4em;
 }
 
 .container {
     max-width: 600px;
     margin: 25px auto 0 auto;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
 }
 
-header {
+.banner {
     color: rgb(223, 217, 217);
     background-image: url(../img/ferks-guare-KEZdWfYD-ow-unsplash\ 1.png);
     background-repeat: no-repeat;
+    height: 167px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 1rem;
+}
+
+.menu {
+    margin: 0 1em;
+    display: grid;
+}
+
+.food-item {
+    margin-top: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: 25% 1fr 20%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "item-emoji item-name        add-item"
+        "item-emoji item-description add-item"
+        "item-emoji item-price       add-item"
+    ;
+}
+
+.item-emoji {
+    grid-area: item-emoji;
+    font-size: 4.92rem;
+    text-align: center;
+}
+
+.item-name {
+    grid-area: item-name;
+}
+
+.item-ingredients {
+    grid-area: item-description;
+}
+
+.item-price {
+    grid-area: item-price;
+}
+
+.add-item {
+    grid-area: add-item;
+    place-self: center;
+}
+
+footer {
+    margin: 2.4rem 1em 0 1em;
+}
+
+footer header {
+    font-family: 'Smythe', cursive;
+    font-size: 1rem;
+    text-align: center;
+}
+
+footer .order-items {
+    margin-bottom: 1rem;
+}
+
+footer .order-total {
+    border-top: 2px solid black;
+    padding-top: 1rem;
+}
+
+/* Utility */
+.hidden {
+    display: none;
 }
