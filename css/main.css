@@ -104,15 +104,16 @@ footer .order-items {
 footer .order-total {
     border-top: 2px solid black;
     margin-top: 1.6rem;
-    padding-top: 1rem;
+    padding: 1rem 0;
 }
 
-.order-items,
+.added-item,
 .order-total {
     display: grid;
-    grid-template-columns: 20% 1fr 20%;
+    grid-template-columns: 25% 1fr 20%;
     align-items: center;
 }
+
 
 .order-item {
     grid-column: 1/2;
@@ -141,6 +142,10 @@ footer .order-total {
 }
 .order-total #order-btn {
     grid-column: 1/4;
+}
+
+.order-total #order-btn,
+.pay-btn {
     place-self: center;
     background-color: #16DB99;
     color: white;
@@ -152,11 +157,27 @@ footer .order-total {
     border-radius: 5px;
     margin-top: 3rem;
     cursor: pointer;
-}
-.order-total #order-btn:hover {
-    font-size: 1.4rem;
+
 }
 
+.order-total #order-btn:hover,
+.pay-btn:hover {
+    font-size: 1.4rem;
+}
+.modal {
+    margin: 0 1rem;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+input[type="text"] {
+    padding: .6em .4em .6em 1em;
+    font-size: 1em;
+}
 
 
 /* Utility */
