@@ -120,19 +120,37 @@ function paymentModal() {
     
     const payModalClose = document.querySelector('#pay-btn');
     payModalClose.addEventListener('click', () => {
-        console.log('was clicked')
-        clearOrder();
+        const nameField = document.getElementById('name-field');
+        const cardField = document.getElementById('card-field');
+        const cvvField = document.getElementById('cvv-field');
+        
+        if(nameField.value.length > 0 && cardField.value.length > 0 && cvvField.value.length > 0) {
+            clearOrder(nameField);
+        } 
     })
 }
 
-function clearOrder() {
+function clearOrder(arr) {
         currentOrder = [];
         currentTotal = [];
         yourOrder.innerHTML = '';
         yourOrder.classList.toggle("hidden");
        let thankYou =  document.querySelector(".order-complete");
        thankYou.classList.remove("hidden");
-       setTimeout( () => {
-        location.reload()
-       }, "3500")
+       thankYou.innerHTML = `
+       <h2>Thanks, ${arr.value}! Your order is on its way!</h2>
+       `;
+
+       let timeleft = 10;
+       const downloadTimer = setInterval(function(){
+         if(timeleft <= 0){
+           clearInterval(downloadTimer);
+           location.reload();
+         } else {
+           thankYou.innerHTML = `
+           <h2>Thanks, ${arr.value}! Your order is on its way! ${timeleft}</h2>
+           `;
+         }
+         timeleft -= 1;
+       }, 1000);
     }
