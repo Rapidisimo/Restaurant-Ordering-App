@@ -79,7 +79,10 @@ function buildTotal(arr) {
         `;
     }
     orderTotal.innerHTML = totalHTML;
-
+    
+    if(currentOrder.length > 0) {
+        paymentModal();
+    }
 }
 
 // Removes an item from the order by getting it's id, converting it to a number, finding a match in the currentOrder Array
@@ -94,11 +97,42 @@ yourOrder.addEventListener('click', (e) => {
         currentOrder.splice(index, 1)
         currentTotal.splice(index, 1)
         e.target.parentNode.parentNode.parentNode.remove()
-        if(currentTotal.length === 0) {
+                if(currentTotal.length === 0) {
             yourOrder.classList.toggle("hidden")
         }
-        console.log(currentTotal)
         buildTotal(currentTotal)
     }
 })
 
+// Checkout section
+
+function paymentModal() {
+    const payModalOpen = document.querySelector('#order-btn');
+    const modal = document.querySelector('.modal');
+
+    payModalOpen.addEventListener('click', () => {
+        modal.showModal();
+        const formFields = document.querySelectorAll('input[type="text')
+        for(let i = 0; i < formFields.length; i++) {
+            formFields[i].value = null;
+        }
+    })
+    
+    const payModalClose = document.querySelector('#pay-btn');
+    payModalClose.addEventListener('click', () => {
+        console.log('was clicked')
+        clearOrder();
+    })
+}
+
+function clearOrder() {
+        currentOrder = [];
+        currentTotal = [];
+        yourOrder.innerHTML = '';
+        yourOrder.classList.toggle("hidden");
+       let thankYou =  document.querySelector(".order-complete");
+       thankYou.classList.remove("hidden");
+       setTimeout( () => {
+        location.reload()
+       }, "3500")
+    }

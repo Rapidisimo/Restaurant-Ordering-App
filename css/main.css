@@ -43,6 +43,7 @@ body {
 
 .menu {
     margin: 0 1em;
+    padding-bottom: 1em;
     display: grid;
 }
 
@@ -157,15 +158,27 @@ footer .order-total {
     border-radius: 5px;
     margin-top: 3rem;
     cursor: pointer;
-
+}
+.pay-btn {
+    margin-top: 1.6rem;
 }
 
 .order-total #order-btn:hover,
 .pay-btn:hover {
     font-size: 1.4rem;
 }
+
 .modal {
-    margin: 0 1rem;
+    margin: auto auto;
+    padding-bottom: 1rem;
+    border: 0;
+    width: 400px;
+}
+
+.modal h1 {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: 1.2em auto;
 }
 
 .fields {
@@ -175,8 +188,21 @@ footer .order-total {
 }
 
 input[type="text"] {
-    padding: .6em .4em .6em 1em;
+    padding: 1em 1em;
     font-size: 1em;
+}
+
+.order-complete {
+    padding: 1rem;
+}
+.order-complete h2 {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'Smythe', cursive;
+    color: #065F46;
+    background-color: #ECFDF5;
+
 }
 
 

@@ -14,7 +14,7 @@
     <div class="container">
         <header class="banner">
             <section>
-                <h1>Jimmy's Dinner</h1>
+                <h1 class="test">Jimmy's Dinner</h1>
                 <h2>The best burgers and pizzas in town.</h2>
             </section>
         </header>
@@ -66,16 +66,17 @@
                 <button id="order-btn">Complete Order</button>
             </section>    
         </footer>
-        <div class="modal">
+        <dialog class="modal">
             <h1>Enter card details</h1>
-            <div>
-                <form action="" id="modal-form" name="modal-form" class="fields">
-                    <input type="text" placeholder="Enter your name">
-                    <input type="text" placeholder="Enter card number">
-                    <input type="text" placeholder="Enter CVV">
-                    <button class="pay-btn">Pay</button>
-                </form>
-            </div>
+            <form action="" id="modal-form" name="modal-form" class="fields" method="dialog">
+                <input type="text" placeholder="Enter your name" id="name-field" required>
+                <input type="text" placeholder="Enter card number" inputmode="numeric" id="card-field" required>
+                <input type="text" placeholder="Enter CVV" inputmode="numeric" id="cvv-field" required>
+                <button class="pay-btn" id="pay-btn">Pay</button>
+            </form>
+        </dialog>
+        <div class="order-complete hidden">
+            <h2>Thanks, Jaime! Your order is on its way!</h2>
         </div>
     </div>    
 
