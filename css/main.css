@@ -115,6 +115,7 @@ footer .order-total {
     display: grid;
     grid-template-columns: 35% 1fr 20%;
     align-items: center;
+    justify-items: left;
 }
 
 
