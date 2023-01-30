@@ -27,16 +27,18 @@ body {
 
 .container {
     max-width: 600px;
-    margin: 25px auto 0 auto;
+    margin: 0 auto;
+    display: grid;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
 }
 
 .banner {
     color: rgb(223, 217, 217);
-    background-image: url(../img/ferks-guare-KEZdWfYD-ow-unsplash\ 1.png);
+    background-image: url(../img/banner.png);
     background-repeat: no-repeat;
-    height: 167px;
+    background-size: cover;
+    /* height: 167px; */
     border-radius: 5px 5px 0 0;
     margin-bottom: 1rem;
 }
@@ -49,7 +51,7 @@ body {
 
 .food-item {
     margin-top: 2rem;
-    padding-bottom: 1.5rem;
+    /* padding-bottom: 1.5rem; */
     border-bottom: 1px solid #ccc;
     display: grid;
     grid-template-columns: 25% 1fr 20%;
@@ -92,9 +94,9 @@ footer {
     margin: 2.4rem 1em 0 1em;
 }
 
-footer header {
+footer h1 {
     font-family: 'Smythe', cursive;
-    font-size: 1rem;
+    font-size: 1.6rem;
     text-align: center;
 }
 
@@ -111,7 +113,7 @@ footer .order-total {
 .added-item,
 .order-total {
     display: grid;
-    grid-template-columns: 25% 1fr 20%;
+    grid-template-columns: 35% 1fr 20%;
     align-items: center;
 }
 
@@ -156,7 +158,7 @@ footer .order-total {
     height: 3.6rem;
     border: none;
     border-radius: 5px;
-    margin-top: 3rem;
+    margin-top: 1.6rem;
     cursor: pointer;
 }
 .pay-btn {
@@ -172,7 +174,8 @@ footer .order-total {
     margin: auto auto;
     padding-bottom: 1rem;
     border: 0;
-    width: 400px;
+    max-width: 400px;
+    min-width: 300px;
 }
 
 .modal h1 {
